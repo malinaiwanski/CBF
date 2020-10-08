@@ -53,15 +53,15 @@ imp2 = ImageCalculator().run("Subtract create stack", imp, avg_img)
 imp2.show()
 #WindowManager.getImage("AVG_Pos0")
 
-num_window_x = int(width-width_sub+1)
-num_window_y = int(height-width_sub+1)
+num_window_x = int(round(width/width_sub)) #int(width-width_sub+1)
+num_window_y = int(round(height/width_sub)) #int(height-width_sub+1)
 
 center_px = int(round(width_sub/2))
 
 new_rois = []
 for i in range(0,num_window_x):
 	for j in range(0,num_window_y):
-		new_roi = Roi(i, j, width_sub, width_sub)
+		new_roi = Roi(i*width_sub, j*width_sub, width_sub, width_sub)
 		new_rois.append(new_roi)
 		
 for new_roi in new_rois:
@@ -102,9 +102,11 @@ for i, roi in enumerate(rm.getRoisAsArray()):
 	img.changes = False
 	img.close()
 
+	print("STICS completed for ROI " + str(i+1) + " of " + str(num_window_x*num_window_y))
+
 IJ.log("2D STICS completed")
-IJ.log("Window size: " + width_sub + " pixels")
-IJ.log("Maximum time lag analyzed: " + max_cycle_length + " frames")
+IJ.log("Window size: " + str(width_sub) + " pixels")
+IJ.log("Maximum time lag analyzed: " + str(max_cycle_length) + " frames")
 
 #savepath = IJ.getDirectory("")
 #imp = IJ.getImage()
@@ -131,6 +133,6 @@ for c in range(dimA[2]):
 			#IJ.log("saved:" + numberedtitle)
 
 #IJ.saveAs(result_stack, "TIFF", coords_path)
-IJ.log("Saved " + dimA[3] + " files at: " + coords_path)
+IJ.log("Saved " + str(dimA[3]) + " files at: " + coords_path)
   	
 print("Done")
