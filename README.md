@@ -1,13 +1,13 @@
 # COVID
 
 Codes to process data for the COVID project.
-This set of files currently allows you to obtain:
+This set of files currently allows you to:
 
-1. a frame time histogram and mean frame time from metadata saved with MicroManager.
+1. obtain a frame time histogram and mean frame time from metadata saved with MicroManager.
 
 2. perform (spatio)temporal image correlation spectroscopy (STICS) in ROIs tiled across your image and safe the resulting correlation profiles.
 
-3. fit the correlation profiles in each ROI to estimate the period/frequency of beating and produce a map of the beat frequencies across the image.
+3. fit the correlation profiles in each ROI to estimate the beat period/frequency and create a map of the beat frequencies across the image.
 
 4. compile the ciliary beat frequency (CBF) information for different conditions into violin plots for comparison.
 
