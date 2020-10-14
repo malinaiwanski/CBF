@@ -1,4 +1,4 @@
-# @Float(label="width and height of square ROI (pixels)", value=25) width_sub
+# @Float(label="width and height of square ROI (pixels)", value=15) width_sub
 # @Float(label="over-estimate the duration of one ciliary beat cycle or enter duration of entire movie (frames)", value=50) max_cycle_length
 # @Dataset dataset
 
