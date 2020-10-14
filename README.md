@@ -7,6 +7,6 @@ Run STICS_distribution_CBF through Fiji scripts on the movie of choice. Note tha
 
 In Jupyter lab, run metadata-extract-timestamps and record the average frame time in msec provided. The histogram will show if there are any outliers in frame time. If the exact frame time of your movie is known, this can be used in the following code instead.
 
-In Jupyter lab, run STICS_CBF. Ensure you input the appropriate frame time in msec, as well as the size of the movie in pixels in x and y. You can toggle between displaying/saving images and files. Note that saving files is required to the subsequent step. This code will provide you with a map of the ciliary beat freuquencies across one field of view.
+In Jupyter lab, run STICS_CBF. Ensure you input the appropriate frame time in msec, as well as the size of the movie in pixels in x and y. You can toggle between displaying/saving images and files. Note that saving files is required to proceed with the subsequent step. This code will provide you with a map of the ciliary beat freuquencies across one field of view.
 
-In Jupyter lab, run STICS_CBF_all_frequencies. This will provide you with a distribution of the ciliary beat frequencies across all movies analyzed.
+In Jupyter lab, run STICS_CBF_all_frequencies. This will provide you with a distribution of the ciliary beat frequencies across all movies analyzed. Here you will have to update the code depending on how you organize your files and which categories you want to plot (e.g. + and - treatment or WT and mutant, etc.)
